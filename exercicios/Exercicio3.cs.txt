@@ -1,0 +1,62 @@
+﻿/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 13/04/2024
+* Autores do Projeto: Arthur Schettine Odoni
+*                     Thiago Ribeiro Walek
+* Turma: 2J
+* Atividade Proposta em aula
+* Observação: 
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int totalValores = 0;
+            int somaValores = 0;
+            int qtdPositivos = 0;
+            int qtdNegativos = 0;
+            int valor = 0;
+
+            Console.WriteLine("Digite os valores (digite 0 para parar):");
+
+            do
+            {
+                valor = int.Parse(Console.ReadLine());
+
+                if (valor == 0)
+                    break;
+
+                totalValores++;
+                somaValores += valor;
+
+                if (valor > 0)
+                    qtdPositivos++;
+                else if (valor < 0)
+
+                    qtdNegativos++;
+
+            } while (valor != 0);
+
+            float media = (float)somaValores / totalValores;
+            float percentualPositivos = (float)qtdPositivos / totalValores * 100;
+            float percentualNegativos = (float)qtdNegativos / totalValores * 100;
+
+            Console.WriteLine("Média: " + media);
+            Console.WriteLine("Quantidade de valores positivos: " + qtdPositivos);
+            Console.WriteLine("Quantidade de valores negativos: " + qtdNegativos);
+            Console.WriteLine("Percentual de valores positivos: " + percentualPositivos + "%");
+            Console.WriteLine("Percentual de valores negativos: " + percentualNegativos + "%");
+        }
+    }
+}

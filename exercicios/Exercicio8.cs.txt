@@ -1,0 +1,39 @@
+﻿/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 13/04/2024
+* Autores do Projeto: Arthur Schettine Odoni
+*                     Thiago Ribeiro Walek
+* Turma: 2J
+* Atividade Proposta em aula
+* Observação: 
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Digite o valor inicial (A) da progressão geométrica:");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a razão (R) da progressão geométrica:");
+            int r = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("A sequência em P.G. contendo 10 valores é:");
+            int valorAtual = a;
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(valorAtual + " ");
+                valorAtual *= r;
+            }
+        }
+    }
+}

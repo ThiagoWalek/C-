@@ -1,0 +1,38 @@
+﻿/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 13/04/2024
+* Autores do Projeto: Arthur Schettine Odoni
+*                     Thiago Ribeiro Walek
+* Turma: 2J
+* Atividade Proposta em aula
+* Observação: 
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 0;
+            float S = 0;
+
+
+            for (x = 0; x <= 500; x++)
+            {
+                if ((x % 3 == 0) && (x % 2 == 1))
+                    S = S + x;
+            }
+            Console.WriteLine("A soma dos números de 1 a 500 é de: " + S);
+
+        }
+    }
+}

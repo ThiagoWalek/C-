@@ -1,0 +1,65 @@
+﻿/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 13/04/2024
+* Autores do Projeto: Arthur Schettine Odoni
+*                     Thiago Ribeiro Walek
+* Turma: 2J
+* Atividade Proposta em aula
+* Observação: 
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char resp = 's';
+            int valor = 0;
+            byte qt1 = 0;
+            byte qt2 = 0;
+            byte qt3 = 0;
+            byte qt4 = 0;
+
+            do
+            {
+                Console.WriteLine("Digite um valor");
+                valor = int.Parse(Console.ReadLine());
+
+                if ((valor >= 0) && (valor <= 25))
+
+                    qt1 += 1;
+
+
+                else if ((valor >= 26) && (valor <= 50))
+
+                    qt2 += 1;
+
+
+                else if ((valor >= 51) && (valor <= 75))
+
+                    qt3 += 1;
+
+
+                else if ((valor >= 76) && (valor <= 100))
+
+                    qt4 += 1;
+
+
+            } while (valor >= 0);
+
+            Console.WriteLine("Quatidade de valores de 0-25: " + qt1);
+            Console.WriteLine("Quatidade de valores de 26-50: " + qt2);
+            Console.WriteLine("Quatidade de valores de 51-75: " + qt3);
+            Console.WriteLine("Quatidade de valores de 76-100: " + qt4);
+        }
+    }
+}

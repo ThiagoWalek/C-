@@ -1,0 +1,65 @@
+﻿/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 13/04/2024
+* Autores do Projeto: Arthur Schettine Odoni
+*                     Thiago Ribeiro Walek
+* Turma: 2J
+* Atividade Proposta em aula
+* Observação: 
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int totalNumeros = 0;
+            float qtdPares = 0;
+            float qtdImpares = 0;
+            int somaPares = 0;
+            int somaTotal = 0;
+            int numero = 0;
+
+            Console.WriteLine("Digite um valor (digite 0 para parar):");
+
+            do
+            {
+                numero = int.Parse(Console.ReadLine());
+
+                if (numero == 0)
+                    break;
+
+                totalNumeros++;
+                somaTotal += numero;
+
+                if (numero % 2 == 0)
+                {
+                    qtdPares++;
+                    somaPares += numero;
+                }
+                else
+                {
+                    qtdImpares++;
+                }
+            } while (numero != 0);
+
+
+            float mediaPares = somaPares / qtdPares;
+            float mediaGeral = somaTotal / totalNumeros;
+
+            Console.WriteLine("Quantidade de números pares: " + qtdPares);
+            Console.WriteLine("Quantidade de números ímpares: " + qtdImpares);
+            Console.WriteLine("Média de valores pares: " + mediaPares);
+            Console.WriteLine("Média geral dos números lidos: " + mediaGeral);
+        }
+    }
+}

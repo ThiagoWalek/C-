@@ -1,0 +1,46 @@
+﻿/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 13/04/2024
+* Autores do Projeto: Arthur Schettine Odoni
+*                     Thiago Ribeiro Walek
+* Turma: 2J
+* Atividade Proposta em aula
+* Observação: 
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Digite um número para calcular a sequência de Fibonacci:");
+            int n = int.Parse(Console.ReadLine());
+
+            int primeiro = 1;
+            int segundo = 1;
+            int resultado = 0;
+            string sequencia = "1 1";
+
+            if (n >= 3)
+            {
+                for (int i = 3; i <= n; i++)
+                {
+                    resultado = primeiro + segundo;
+                    sequencia += " " + resultado;
+                    primeiro = segundo;
+                    segundo = resultado;
+                }
+            }
+
+            Console.WriteLine("A sequência de Fibonacci para " + n + " é: " + sequencia + "");
+        }
+    }
+}

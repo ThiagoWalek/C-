@@ -1,0 +1,53 @@
+﻿/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 13/04/2024
+* Autores do Projeto: Arthur Schettine Odoni
+*                     Thiago Ribeiro Walek
+* Turma: 2J
+* Atividade Proposta em aula
+* Observação: 
+* 
+* problema_aula.cs
+* ************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 0;
+            float altura_maior = 0;
+            float altura_menor = 0;
+
+            for (x = 0; x <= 15; x++)
+            {
+                Console.WriteLine("Digite a altura do " + (x + 1) + "° pessoa");
+                float alt = float.Parse(Console.ReadLine());
+
+                if (x == 0)
+                {
+                    altura_maior = alt;
+                    altura_menor = alt;
+                }
+
+                if (alt > altura_maior)
+                    altura_maior = alt;
+
+                if (alt < altura_menor)
+                    altura_menor = alt;
+            }
+
+            Console.WriteLine("Maior altura: " + altura_maior + "m");
+            Console.WriteLine("Menor altura: " + altura_menor + "m");
+
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+﻿/* *******************************************************************
+* Colegio Técnico Antônio Teixeira Fernandes (Univap)
+* Curso Técnico em Informática - Data de Entrega: 13/04/2024
+* Autores do Projeto: Arthur Schettine Odoni
+*                     Thiago Ribeiro Walek
+* Turma: 2J
+* Atividade Proposta em aula
+* Observação: 
+* 
+* problema_aula.cs
+* ************************************************************/
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Digite um valor inicial de (A):");
+        int a = int.Parse(Console.ReadLine());
+
+        int resultado = 1;
+        string sequencia = "";
+
+        int i = a;
+
+        while (i > 1)
+        {
+            resultado *= i;
+            sequencia += i + " X ";
+            i--;
+        }
+
+        sequencia += "1";
+
+        Console.WriteLine("O fatorial de " + a + "! é:");
+        Console.WriteLine(a + "! = " + sequencia + " = " + resultado);
+    }
+}
